@@ -1,4 +1,5 @@
 # E-commerce Back End
+Videos demonstrating this application can be found here: [video1](https://drive.google.com/file/d/1b_f3K_V0reasDn8BiFt-HUUed1ksJ5Vq/view), [video2](https://drive.google.com/file/d/1FGsRde95erc8_AM7SDkjCWXPqkFaIdjG/view)
 
 ## Description 
 This application is an attempt to create back end of an e-commerce application. This application works with Products, their Categories, and the Tags that belongs to each Products. The data is stored and retrieved using relational database technique. This means, one to many and many to many relationships between these data are used. User can get all the Categories, Products, and Tags using the GET request. The user can use POST requrest to create data for Products, Categories, and Tags. The user can use PUT request to update all three of the data. Finally, the user can use DELETE request to delete all the above data.
