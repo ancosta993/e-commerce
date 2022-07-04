@@ -5,17 +5,34 @@ This application is an attempt to create back end of an e-commerce application. 
 
 ## Table Of Content
 - **[Description](#description)**
-- **[Installation Instruction](#installation)**
 - **[Tools and Libraries](#tools-and-libraries)**
+- **[Installation Instruction](#installation)**
 - **[Usage Information](#usage)**
 - **[Function](#function-psudocode)**
 
 ## Tools and Libraries
-- Node.Js
+- Node.js
+- Insomnia to test the routes
 - MySQL relational database
-- Sequelize used for handling MySQL queries through JavaScript Classes.
-- express.Js for handling browser requests
+- Sequelize (Object Relational Mapping) used for handling MySQL queries through JavaScript Classes.
+- express.js for handling browser requests
 - dotenv for handling sensitive user information such as datbase name and passwords
 - mysql2 for connecting MySQL and Javascript
+
+## Installation
+The user needs to download Node.js, MySQL, Sequelize.  
+Then, in the Node terminal, run the `npm install` command. After all the installations:  
+
+- Clone the repository
+- Create a `.env` named text file and fill in the fields DB_PASSWORD, DB_USER, DB_NAME
+- Open command prompt and cd into the cloned repo file path
+- log inti mysql using command `mysql -u [root] -p` (in the [] 'root' can be replaced with the username).
+- run the command `source db/schema.sql`. This will create the Database.
+- type in `quite` to exit the MySQL terminal.
+- now, on the node terminal, run `node seeds`. This will enter the already available data regarding Products, Categories, and Tags in the seeds file.
+- run the command `npm start` to start the server.
+
+
+
 
 
