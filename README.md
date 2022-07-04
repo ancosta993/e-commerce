@@ -8,7 +8,7 @@ This application is an attempt to create back end of an e-commerce application. 
 - **[Tools and Libraries](#tools-and-libraries)**
 - **[Installation Instruction](#installation)**
 - **[Usage Information](#usage)**
-- **[Function](#function-psudocode)**
+- **[Testing](#testing)**
 
 ## Tools and Libraries
 - Node.js
@@ -61,6 +61,9 @@ After the seeding is done (see the installation instructions), the user can use 
   - delete a category by sending a DELETE request with the id of the category in question in the `params` section. NOTE: deleting a category will not delete all the products that used to belong to the category. They will have NULL for their category_id foreign key.
   - delete a product by sending a DELETE request with the id of the product in question in the `params` section.
   - delete a tag by sending a DELETE request with the id of the tag in question in the `params` section.
+
+## Testing
+The application can be tested through Insomnia. 
  
 
 
