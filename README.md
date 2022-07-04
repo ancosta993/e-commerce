@@ -53,9 +53,14 @@ After the seeding is done (see the installation instructions), the user can use 
 	"category_id": 6  
 }`  The `category_id` is the foreign key which corresponds to the category this product will belong to. The `tagIds` is a list of tag ids that will belong to this new product. The initial tags are seeded through the seeds/ file. 
   - Create tag by sending in request body JSON data. Ex. `{"tag_name":"Electronics", "productIds":[5, 6]}` This creates a new tag named 'Electronics'. The products that contains this tag will have id 5 and 6. 
--**PUT**
+- **PUT**
   - Update the title of a category given their ids. It is done by sending a body with {"category_name":"Gaming Laptop"} for example. If this request body is sent through the PUT request using the id of the category to change, then the category will change the title.  
-  - The product can also be updated simillarly by sending the appropriate fields through body in JSON format. The PUT request must be made with the id of the product that is in question in the `params` section of the URL. For example: if we want to change some info of our newly created product named "Lenovo Legion" in "Laptops" categories, we will send the JSON body {"stock":"12", "price": 17} in the URL with the id of our "Lenovo Legion" in the `params`.
-  - 
+  - The product can also be updated simillarly by sending the appropriate fields through body in JSON format. The PUT request must be made with the id of the product that is in question in the `params` section of the URL. For example: if we want to change some info of our newly created product named "Lenovo Legion" in "Laptops" categories, we will send the JSON body {"stock":"12", "price": 1700} in the URL with the id of our "Lenovo Legion" in the `params`. This will change the stocks and price data of our product.
+  - The title of a tag can be updated if the req body containing the title is sent in a PUT request. The request must be created with the id of the tag in the URL `params` section. For example sending {"tag_name":"electronic"} to our newly created tag in the previous step to change its name to 'electronics'.
+- **DELETE**
+  - delete a category by sending a DELETE request with the id of the category in question in the `params` section. NOTE: deleting a category will not delete all the products that used to belong to the category. They will have NULL for their category_id foreign key.
+  - delete a product by sending a DELETE request with the id of the product in question in the `params` section.
+  - delete a tag by sending a DELETE request with the id of the tag in question in the `params` section.
+ 
 
 
