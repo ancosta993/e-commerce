@@ -54,6 +54,8 @@ After the seeding is done (see the installation instructions), the user can use 
 }`  The `category_id` is the foreign key which corresponds to the category this product will belong to. The `tagIds` is a list of tag ids that will belong to this new product. The initial tags are seeded through the seeds/ file. 
   - Create tag by sending in request body JSON data. Ex. `{"tag_name":"Electronics", "productIds":[5, 6]}` This creates a new tag named 'Electronics'. The products that contains this tag will have id 5 and 6. 
 -**PUT**
-
+  - Update the title of a category given their ids. It is done by sending a body with {"category_name":"Gaming Laptop"} for example. If this request body is sent through the PUT request using the id of the category to change, then the category will change the title.  
+  - The product can also be updated simillarly by sending the appropriate fields through body in JSON format. The PUT request must be made with the id of the product that is in question in the `params` section of the URL. For example: if we want to change some info of our newly created product named "Lenovo Legion" in "Laptops" categories, we will send the JSON body {"stock":"12", "price": 17} in the URL with the id of our "Lenovo Legion" in the `params`.
+  - 
 
 
